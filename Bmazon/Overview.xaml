@@ -1,0 +1,46 @@
+﻿<Page x:Class="Bmazon.Overview"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Bmazon"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Overview">
+
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" x:Name="CheckCustomerData_TextBlock" Text="Please check if you insert your data corrrectly."/>
+        <StackPanel Grid.Row="1" Grid.Column="1" x:Name="Products_StackPanel">
+            <Label x:Name="Products_Label" FontWeight="Bold" Content="Products:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" x:Name="Quantity_StackPanel">
+            <Label x:Name="Quantity_Label" FontWeight="Bold" Content="Quantity:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3" x:Name="Price_StackPanel">
+            <Label x:Name="Price_Label" FontWeight="Bold" Content="Price (in €):"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" x:Name="DeliveryAddress_StackPanel">
+            <Label x:Name="DeliveryAddress_Label" FontWeight="Bold" Content="Delivery address:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" x:Name="ShippingMethod_StackPanel">
+            <Label x:Name="ShippingMethod_Label" FontWeight="Bold" Content="Shipping:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2" x:Name="PaymentMethod_StackPanel">
+            <Label x:Name="PaymentMethod_Label" FontWeight="Bold" Content="Payment:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="3" x:Name="TotalPrice_StackPanel">
+            <Label x:Name="TotalPrice_Label" FontWeight="Bold" Content="Total price (in €):"/>
+        </StackPanel>
+    </Grid>
+</Page>
