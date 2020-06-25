@@ -7,20 +7,27 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ShippingAdress">
-    <Grid Background="WhiteSmoke">
+    <Grid Background="AliceBlue">
         <StackPanel x:Name="LieferanschriftStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250">
             <StackPanel.Resources>
-                <Style TargetType="TextBox">
+                <Style TargetType="Label">
                     <Setter Property="Margin" Value="0,10,0,0"/>
                 </Style>
             </StackPanel.Resources>
-            <Label x:Name="Versandadresse_Label" FontWeight="SemiBold" FontSize="18" Content="Versandadresse:"/>
+            <Label x:Name="Versandadresse_Label" FontWeight="SemiBold" FontSize="18" Content="Shipping Address:"/>
+            <Label Content="Name"/>
             <TextBox x:Name="LastName_TextBox"/>
+            <Label Content="Firstname"/>
             <TextBox x:Name="FirstName_TextBox"/>
+            <Label Content="Street"/>
             <TextBox x:Name="StreetName_TextBox"/>
+            <Label Content="House No."/>
             <TextBox x:Name="HouseNr_TextBox"/>
+            <Label Content="Postal Code"/>
             <TextBox x:Name="PostalCode_TextBox"/>
+            <Label Content="City"/>
             <TextBox x:Name="City_TextBox"/>
+            <Label Content="Country"/>
             <TextBox x:Name="Country_TextBox"/>
         </StackPanel>
     </Grid>

@@ -21,11 +21,10 @@ namespace Bmazon
     public partial class MainWindow : Window
     {
         ItemSelection produktauswahl;
-        ShoppingCart warenkorbübersicht;
+        ShoppingCartOverview warenkorbübersicht;
         PaymentOption versandZahlungsart;
         ShippingAdress lieferadresse;
         Overview bestellübersicht;
-        Completion fertig;
 
         public MainWindow()
         {
@@ -33,11 +32,10 @@ namespace Bmazon
 
             // Pages erstellen
             produktauswahl = new ItemSelection(this);
-            warenkorbübersicht = new ShoppingCart(this);
+            warenkorbübersicht = new ShoppingCartOverview(this);
             versandZahlungsart = new PaymentOption(this);
             lieferadresse = new ShippingAdress(this);
             bestellübersicht = new Overview(this);
-            fertig = new Completion(this);
 
             Back_Button.Visibility = Visibility.Hidden;
             Back_Button.IsEnabled = false;
@@ -103,7 +101,7 @@ namespace Bmazon
                 Continue_Button.Visibility = Visibility.Hidden;
                 Continue_Button.IsEnabled = false;
 
-                MyFrame.Navigate(fertig);
+                MessageBox.Show("Thank you for shopping at Bmazon. Your order is being processed.");
             }
         }
         private void Back_Button_Click(object sender, RoutedEventArgs e)
@@ -131,13 +129,6 @@ namespace Bmazon
             else if (MyFrame.Content == bestellübersicht)
             {
                 MyFrame.Navigate(lieferadresse);
-            }
-            else if (MyFrame.Content == fertig)
-            {
-                Continue_Button.Visibility = Visibility.Visible;
-                Continue_Button.IsEnabled = true;
-
-                MyFrame.Navigate(bestellübersicht);
             }
         }
     }

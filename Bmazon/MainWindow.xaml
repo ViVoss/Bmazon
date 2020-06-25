@@ -5,27 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bmazon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1200" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="75"/>
         </Grid.RowDefinitions>
-        <DockPanel>
-            <DockPanel.Background>
-                <SolidColorBrush Color="DimGray"/>
-            </DockPanel.Background>
-            <Label Name="ValorantSkinShop_Label" Content="Shop" FontSize="40" FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="5"/>
-            <Button Name="ShoppingCart_Button" Width="200" Height="40" Content="Shopping Cart" FontSize="24" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" DockPanel.Dock="Right" Click="ShoppingCart_Button_Click" Background="#ffa500" BorderBrush="#ffa500" Foreground="#DD000000"/>
-        </DockPanel>
-        <Frame Grid.Row="1" x:Name="MyFrame" Height="621" Width="1272" Background="MediumSlateBlue" Margin="0,0,0,-1" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Row="0" x:Name="MyFrame" Background="AliceBlue" NavigationUIVisibility="Hidden"/>
         <DockPanel Grid.Row="2">
             <DockPanel.Background>
                 <SolidColorBrush Color="DimGray"/>
             </DockPanel.Background>
-            <Button Name="Continue_Button" Width="150" Height="40" Content="Continue" FontSize="24" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" DockPanel.Dock="Right" Click="Continue_Button_Click" Background="#ffa500" BorderBrush="#ffa500" Foreground="#DD000000"/>
-            <Button Name="Back_Button" Width="150" Height="40" Content="Back" FontSize="24" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" DockPanel.Dock="Right" Click="Back_Button_Click" Background="#ffa500" BorderBrush="#ffa500" Foreground="#DD000000"/>
+            <Button Name="Continue_Button" Width="150" Height="40" Content="Continue" FontSize="24" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" DockPanel.Dock="Right" Click="Continue_Button_Click" Background="#FFFF00" BorderBrush="#FFFF00" Foreground="#DD000000"/>
+            <Button Name="Back_Button" Width="150" Height="40" Content="Back" FontSize="24" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" DockPanel.Dock="Right" Click="Back_Button_Click" Background="#FFFF00" BorderBrush="#FFFF00" Foreground="#DD000000"/>
         </DockPanel>
     </Grid>
 </Window>

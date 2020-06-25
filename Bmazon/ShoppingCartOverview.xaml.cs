@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 namespace Bmazon
 {
     /// <summary>
-    /// Interaktionslogik für ShoppingCart.xaml
+    /// Interaktionslogik für ShoppingCartOverview.xaml
     /// </summary>
-    public partial class ShoppingCart : Page
+    public partial class ShoppingCartOverview : Page
     {
         ItemEntities connection = new ItemEntities();
         List<ShoppingCart> shoppingCartList;
@@ -26,7 +26,7 @@ namespace Bmazon
 
         public MainWindow MainWindow { get; set; }
 
-        public ShoppingCart(MainWindow mainWindow)
+        public ShoppingCartOverview(MainWindow mainWindow)
         {
             this.MainWindow = mainWindow;
             InitializeComponent();
@@ -175,10 +175,10 @@ namespace Bmazon
 
         private void addItemsToUnitsInStockQuantityComboBox(ComboBox quantityComboBox)
         {
-                for (int i = 1; i <= 99; i++)
-                {
-                    quantityComboBox.Items.Add(i);
-                }
+            for (int i = 1; i <= 99; i++)
+            {
+                quantityComboBox.Items.Add(i);
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

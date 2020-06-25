@@ -32,7 +32,6 @@ namespace Bmazon
         {
             this.MainWindow = mainWindow;
             InitializeComponent();
-
             productList = connection.Items.ToList();
 
             if (productList.Count() > 0)
@@ -68,23 +67,23 @@ namespace Bmazon
                     ProductQuantity_ComboBox.Width = 50;
                     ProductQuantity_ComboBox.Margin = new Thickness(0, 0, 0, 10);
                     ProductQuantity_ComboBox.SelectedIndex = 0;
-                    addItemsToUnitsInStockQuantityComboBox(99, ProductQuantity_ComboBox);
+                    addItemsToUnitsInStockQuantityComboBox(ProductQuantity_ComboBox);
 
                     Button AddToCart_Button = new Button();
                     AddToCart_Button.Content = "Add To Cart";
                     AddToCart_Button.Width = 150;
-                    AddToCart_Button.Background = (Brush)new BrushConverter().ConvertFrom("#ffa500");
-                    AddToCart_Button.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#ffa500");
+                    AddToCart_Button.Background = (Brush)new BrushConverter().ConvertFrom("#FF8C1D");
+                    AddToCart_Button.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#FF8C1D");
                     AddToCart_Button.Foreground = (Brush)new BrushConverter().ConvertFrom("#DD000000");
                     AddToCart_Button.Click += delegate
                     {
                         try
                         {
-                            ShoppingCart shoppingCartItemExist = connection.ShoppingCarts.Where(x => x.ItemID == item.ID).FirstOrDefault();
+                            ShoppingCart shoppingCartItemExist = connection.ShoppingCarts.Where(x => x.ID == item.ID).FirstOrDefault();
 
                             if (shoppingCartItemExist?.ItemID != item.ID)
                             {
-                                ShoppingCart shoppingCartItem = new ShoppingCart(mainWindow)
+                                ShoppingCart shoppingCartItem = new ShoppingCart()
                                 {
                                     ItemID = item.ID,
                                     Quantity = Convert.ToInt32(ProductQuantity_ComboBox.SelectedItem),
@@ -132,11 +131,12 @@ namespace Bmazon
 
                 ItemSelection_WrapPanel.Children.Add(NoCurrentProducts_Label);
             }
+            MessageBox.Show("Welcome to Bmazon! We're gonna lift your spirit with spirits!");
         }
 
-        private void addItemsToUnitsInStockQuantityComboBox(int maxOrderQty, ComboBox quantityComboBox)
+        private void addItemsToUnitsInStockQuantityComboBox(ComboBox quantityComboBox)
         {
-                for (int i = 1; i <= maxOrderQty; i++)
+                for (int i = 1; i <= 99; i++)
                 {
                     quantityComboBox.Items.Add(i);
                 }

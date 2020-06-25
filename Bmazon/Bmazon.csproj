@@ -99,13 +99,9 @@
     <Compile Include="ShoppingCart.cs">
       <DependentUpon>AWE26Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingCart.xaml.cs">
-      <DependentUpon>ShoppingCart.xaml</DependentUpon>
+    <Compile Include="ShoppingCartOverview.xaml.cs">
+      <DependentUpon>ShoppingCartOverview.xaml</DependentUpon>
     </Compile>
-    <Page Include="Completion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ItemSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,9 +113,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Completion.xaml.cs">
-      <DependentUpon>Completion.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -137,7 +130,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ShoppingCart.xaml">
+    <Page Include="ShoppingCartOverview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,9 +172,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ItemImages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="AWE26Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -193,6 +184,11 @@
       <DependentUpon>AWE26Model.edmx</DependentUpon>
       <LastGenOutput>AWE26Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="ItemImages\arran14.png" />
+    <Resource Include="ItemImages\bowmore15.png" />
+    <Resource Include="ItemImages\glenmorangie10.png" />
+    <Resource Include="ItemImages\jameson.png" />
+    <Resource Include="ItemImages\oban14.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
